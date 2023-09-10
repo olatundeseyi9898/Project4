@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --main: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    background: var(--main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.card-container {
+    width: 25%;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    padding: 15px 15px;
+}
+
+.card-effect {
+    background: url(/IMAGES/icon-view.svg) no-repeat center;
+    background-color: var(--cyan);
+    height: 50%;
+    border-radius: 10px 10px;
+}
+
+.card-image {
+    background: url(/IMAGES/image-equilibrium.jpg) no-repeat center center/cover;
+    border-radius: 10px 10px;
+    height: 100%;
+}
+
+.card-image:hover {
+    height: 100%;
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+.card-details {
+    font-family: 'Outfit', sans-serif;
+}
+
+h1 {
+    color: var(--white);
+    font-weight: 600;
+}
+
+p {
+    color: var(--blue);
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-svg {
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    padding-right: 8px;
+}
+
+.eth-icon {
+    display: flex;
+    align-items: center;
+}
+
+.time-icon {
+    display: flex;
+    align-items: center;
+}
+
+.eth-price {
+    font-size: 18px;
+    color: var(--cyan);
+    font-weight: 300;
+}
+
+.time-left {
+    font-size: 18px;
+    color: var(--blue);
+    font-weight: 300;
+}
+
+.card-line {
+    border-top: 2px solid var(--line);
+}
+
+.creator-row {
+    display: flex;
+    align-items: center;
+}
+
+.creator-avatar {
+    height: 20px;
+    padding-right: 8px;
+}
+
+.creator-info {
+    font-size: 15px;
+}
+
+.creator-name {
+    color: var(--white);
+}
+
+/* hover */
+h1:hover {
+    color: var(--cyan);
+}
+
+.creator-name:hover {
+    color: var(--cyan);
+}
+
+@media (max-width: 600px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        height: 900px;
+        width: 90%;
+    }
+
+    .card-image {
+        width: 100%;
+    }
+}
